@@ -201,19 +201,19 @@ export default function Album(props) {
             <div className={classes.heroButtons}>
                 <AppBar position="fixed" color="black" className={classes.heroButtons} >
                     <Toolbar className={classes.toolbar}>
-                        <Typography className={classes.title} variant="h1" display="inline" component="p" gutterBottom noWrap>
+                        <Typography className={classes.title} variant="h1" display="inline" component="p" gutterBottom Wrap>
                             dimend
-                                    <Typography className={classes.title2} variant="overline" display="inline" gutterBottom noWrap>
+                                    <Typography className={classes.title2} variant="overline" display="inline" gutterBottom Wrap>
                                 SCAASI
                                     </Typography>
                         </Typography>
-                        <Typography className={classes.title1} variant="subtitle1" display="inline" gutterBottom >
+                        <Typography className={classes.title1} variant="subtitle1" display="inline" gutterBottom noWrap>
                             Diamonds
-                                <Typography className={classes.title1} variant="subtitle1" display="inline" fontWeight="fontWeightBold">
+                                <Typography className={classes.title1} variant="subtitle1" display="inline" fontWeight="fontWeightBold" gutterBottom noWrap>
                                 Accessories
-                                <Typography className={classes.title1} variant="subtitle1" display="inline" gutterBottom >
+                                <Typography className={classes.title1} variant="subtitle1" display="inline" gutterBottom noWrap>
                                     Fine Jewelery
-                                <Typography className={classes.title1} variant="subtitle1" display="inline" gutterBottom >
+                                <Typography className={classes.title1} variant="subtitle1" display="inline" gutterBottom noWrap>
                                         WATCHES
                                 </Typography>
                                 </Typography>
