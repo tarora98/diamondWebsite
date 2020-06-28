@@ -343,7 +343,7 @@ export default function Album(props) {
                                 <TextField id="standard-basic" label="Enter your email Id" />
                             </Typography>
                         </ThemeProvider>
-                        <Typography variant="h6"  paragraph>
+                        <Typography variant="h6" paragraph>
                             <Button variant="contained" color="BLACK" >
                                 Sign Up
                         </Button>

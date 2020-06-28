@@ -280,11 +280,13 @@ export default function privacy() {
             </Hidden>
             <Hidden smUp>
                 <Grid container>
-                    <AppBar position="absolute" align='center' style={{ position: 'absolute', paddingTop: '350px', backgroundColor: 'inherit' }}>
+                    <AppBar position="static" align='center' style={{ backgroundColor: 'inherit' }}>
                         <img src="https://public-v2links.adobecc.com/0c653836-7184-45e7-6bb2-2380d9949104/component?params=component_id%3A69408bd6-0200-45bb-96b6-9d055e54b2bd&params=version%3A1&token=1593363226_da39a3ee_3a024d02ebe54e153eff8a61e48a4873421464f9&api_key=CometServer1" alt="img18" />
                     </AppBar>
                 </Grid>
             </Hidden>
+
+
             <br />
             <br />
             <Grid item xs={12}>
