@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import Routing from './Routing';
+import ReactGA from 'react-ga';
+import home from './Main_Code/home';
+import createHistory from 'history/createBrowserHistory';
 
-function App() {
+
+const Error404 = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <h1>Page Not Found</h1>
   );
+}
+
+
+const history = createHistory()
+history.listen(location => {
+  ReactGA.set({ page: location.pathname })
+  ReactGA.pageview(location.pathname)
+})
+
+
+const App = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname)
+  })
+
+
+  return (
+   
+    <BrowserRouter history={history}>
+      <Switch>
+        <Route path="/" component={() => <Routing />} />
+        <Route component={Error404} />
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
 export default App;
