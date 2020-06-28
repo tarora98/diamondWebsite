@@ -1,10 +1,10 @@
- import React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import home from './Main_Code/home';
+import home from './home/Home';
 import * as serviceWorker from './serviceWorker';
-import {createStore} from 'redux'; 
+import { createStore } from 'redux';
 import { Provider } from 'react-redux'
 // // STORE -> GLOBALIZED STATE
 
@@ -34,7 +34,7 @@ import { Provider } from 'react-redux'
 //   }
 // }
 // let store=createStore(counter); // update in store
- 
+
 // // display it in the console
 // store.subscribe(()=> console.log(store.getState()));
 

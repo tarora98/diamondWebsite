@@ -1,6 +1,6 @@
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import home from './Main_Code/home';
+import home from './home/home';
 import React from "react";
 function HowTo(props) {
     return (

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Routing from './Routing';
 import ReactGA from 'react-ga';
-import home from './Main_Code/home';
+import home from './home/Home';
 import createHistory from 'history/createBrowserHistory';
 
 
@@ -28,7 +28,7 @@ const App = () => {
 
 
   return (
-   
+
     <BrowserRouter history={history}>
       <Switch>
         <Route path="/" component={() => <Routing />} />

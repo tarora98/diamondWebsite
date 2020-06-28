@@ -21,7 +21,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
-
+import TextField from '@material-ui/core/TextField';
 import slider from './slider';
 import Footer from './Footer';
 import cardimage from '../image/cards.jpg';
@@ -263,10 +263,11 @@ export default function Album(props) {
                                         <Typography gutterBottom variant="h6" component="h2" align="center" paragraph>
                                             Accessories
                                         </Typography>
-
-                                        <Typography gutterBottom variant="body" component="h6" align="center" >
-                                            Something short and leading about the collection
+                                        <ThemeProvider theme={theme}>
+                                            <Typography gutterBottom variant="body" component="h6" align="center" >
+                                                EveryDiamond in our Collections
                                         </Typography>
+                                        </ThemeProvider>
                                     </CardContent>
                                 </Card>
                             </Grid>
@@ -286,14 +287,14 @@ export default function Album(props) {
                         </ThemeProvider>
                     </Container>
                 </div>
-                <div className={classes.heroContent1}>
+                <div className={classes.heroContent1} style={{ backgroundColor: 'white' }}>
                     <Grid container>
                         <Grid item xs={12}>
                             <Coverflow
                                 height={300}
                                 displayQuantityOfSide={2}
                                 navigation={true}
-                                enableHeading={true}
+                                enableHeading={false}
                             >
                                 <div
                                     // onClick={() => fn()}
@@ -329,33 +330,40 @@ export default function Album(props) {
             <footer className={classes.footer}>
                 <div className={classes.heroContent1}>
                     <Container maxWidth="sm">
-                        <Typography component="h1" className={classes.fontsize} variant="h6" align="center" color="textPrimary" gutterBottom>
-                            Our Collections
+                        <Typography component="h1" className={classes.fontsize} variant="h6" color="textPrimary" gutterBottom>
+                            Keep In Touch
             </Typography>
                         <ThemeProvider theme={theme}>
-                            <Typography variant="h6" align="center" color="red" paragraph>
+                            <Typography variant="h6" color="red" paragraph>
                                 Something short and leading about the collection below—its contents, the creator, etc.
                                 Make it short and sweet, but not too short so folks don&apos;t simply skip over it
                                 entirely.
             </Typography>
+                            <Typography variant="h6" color="red" paragraph>
+                                <TextField id="standard-basic" label="Enter your email Id" />
+                            </Typography>
                         </ThemeProvider>
-                        {/* {photoframe()} */}
+                        <Typography variant="h6"  paragraph>
+                            <Button variant="contained" color="BLACK" >
+                                Sign Up
+                        </Button>
+                        </Typography>
                     </Container>
                 </div>
             </footer>
-            {Footer()}  
+            {Footer()}
             <MobileStepper
                 position="static"
                 variant="text"
                 activeStep={activeStep}
                 nextButton={
-                    <Button size="small" onClick={handleNext} disabled={activeStep === 2} navigation={true}  >
+                    <Button size="large" onClick={handleNext} disabled={activeStep === 2} navigation={true} KeyboardArrowLeft={true}>
                         Next
                 {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
                     </Button>
                 }
                 backButton={
-                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                    <Button size="large" onClick={handleBack} disabled={activeStep === 0} KeyboardArrowRight={true}>
                         {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
             Back
           </Button>

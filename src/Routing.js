@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import home from './Main_Code/home';
+import home from './home/Home';
 import ReactGA from 'react-ga';
 import createHistory from 'history/createBrowserHistory';
 
